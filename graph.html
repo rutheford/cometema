@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+    <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Sugestões de tema XXX COMECON</title>
+
+      <script type="text/javascript" src="http://visjs.org/dist/vis.js"></script>
+      <link href="http://visjs.org/dist/vis-network.min.css" rel="stylesheet" type="text/css">
+
+      <style type="text/css">
+        #mynetwork {
+          width: 100%;
+          height: 95vh;
+        }
+      </style>
+    </head>
+    <body>
+
+    <div id="mynetwork"><div class="vis-network" tabindex="900" style="position: relative; overflow: hidden; touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;"><canvas style="position: relative; touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); width: 100%; height: 100%;" width="600" height="400"></canvas></div></div>
+
+    <script type="text/javascript">
+      // create an array with nodes
+
+
+      var nodes = new vis.DataSet([    {id: 1, label: 'Francisco de Assis'},
+    {id: 2, label: 'Mulheres do/no Evangelho'},
+    {id: 3, label: 'Música'},
+    {id: 5, label: 'Evolução em Dois Mundos'},
+    {id: 6, label: 'Mediunidade / Mediunidade e vida'},
+    {id: 7, label: 'Espiritismo no Brasil / História do Espiritismo no Brasil'},
+    {id: 8, label: 'Jesus / Jesus Guia e Modelo'},
+    {id: 9, label: 'História de Lucas / São Lucas'},
+    {id: 10, label: 'Arte e Espiritismo / Espiritismo na Arte'},
+    {id: 11, label: 'A Caminho da Luz'},
+    {id: 12, label: 'Cristianismo Primitivo'},
+    {id: 13, label: 'Romances de Emmanuel'},
+    {id: 15, label: 'Bíblia'},
+    {id: 16, label: 'Os Dez Mandamentos'},
+    {id: 17, label: 'Há Dois Mil Anos...'},
+    {id: 18, label: 'Ave, Cristo!'},
+    {id: 19, label: 'Renúncia'},
+    {id: 20, label: 'Paulo e Estêvão'},
+    {id: 21, label: 'Natureza e preservação ambiental'},
+    {id: 22, label: 'O mundo atual'},
+    {id: 23, label: 'Doutrina Espírita tríplice aspecto'},
+    {id: 24, label: 'História do Espiritismo'},
+    {id: 25, label: 'Espiritismo no Brasil e no Mundo'},
+    {id: 26, label: 'Mulheres na História do Espiritismo'},
+    {id: 28, label: 'Brasil'},
+    {id: 30, label: 'Chico Xavier'},
+    {id: 31, label: 'A vida no mundo dos Espíritos'},
+    {id: 32, label: 'Livro Nosso Lar'},
+    {id: 34, label: 'Ser espírita'},
+  ]);
+
+      // create an array with edges
+      var edges = new vis.DataSet([    {from: 1, to: 34},
+    {from: 1, to: 6},
+    {from: 1, to: 8},
+    {from: 1, to: 12},
+    {from: 1, to: 15},
+    {from: 1, to: 21},
+    {from: 2, to: 34},
+    {from: 2, to: 8},
+    {from: 2, to: 9},
+    {from: 2, to: 12},
+    {from: 2, to: 13},
+    {from: 2, to: 15},
+    {from: 2, to: 17},
+    {from: 2, to: 19},
+    {from: 2, to: 20},
+    {from: 2, to: 22},
+    {from: 2, to: 26},
+    {from: 3, to: 10},
+    {from: 5, to: 32},
+    {from: 5, to: 6},
+    {from: 5, to: 21},
+    {from: 5, to: 30},
+    {from: 5, to: 31},
+    {from: 6, to: 32},
+    {from: 6, to: 34},
+    {from: 6, to: 8},
+    {from: 6, to: 10},
+    {from: 6, to: 12},
+    {from: 6, to: 15},
+    {from: 6, to: 16},
+    {from: 6, to: 23},
+    {from: 6, to: 24},
+    {from: 6, to: 25},
+    {from: 6, to: 26},
+    {from: 6, to: 30},
+    {from: 6, to: 31},
+    {from: 7, to: 32},
+    {from: 7, to: 34},
+    {from: 7, to: 10},
+    {from: 7, to: 13},
+    {from: 7, to: 15},
+    {from: 7, to: 22},
+    {from: 7, to: 23},
+    {from: 7, to: 24},
+    {from: 7, to: 25},
+    {from: 7, to: 26},
+    {from: 7, to: 28},
+    {from: 7, to: 30},
+    {from: 8, to: 9},
+    {from: 8, to: 11},
+    {from: 8, to: 12},
+    {from: 8, to: 15},
+    {from: 8, to: 16},
+    {from: 8, to: 17},
+    {from: 8, to: 18},
+    {from: 8, to: 20},
+    {from: 8, to: 22},
+    {from: 8, to: 24},
+    {from: 8, to: 25},
+    {from: 9, to: 12},
+    {from: 9, to: 15},
+    {from: 9, to: 20},
+    {from: 10, to: 34},
+    {from: 10, to: 22},
+    {from: 10, to: 23},
+    {from: 10, to: 24},
+    {from: 10, to: 30},
+    {from: 11, to: 13},
+    {from: 11, to: 15},
+    {from: 11, to: 16},
+    {from: 11, to: 22},
+    {from: 11, to: 23},
+    {from: 11, to: 24},
+    {from: 11, to: 25},
+    {from: 11, to: 28},
+    {from: 11, to: 30},
+    {from: 12, to: 13},
+    {from: 12, to: 15},
+    {from: 12, to: 16},
+    {from: 12, to: 17},
+    {from: 12, to: 18},
+    {from: 12, to: 19},
+    {from: 12, to: 20},
+    {from: 12, to: 24},
+    {from: 13, to: 15},
+    {from: 13, to: 17},
+    {from: 13, to: 18},
+    {from: 13, to: 19},
+    {from: 13, to: 20},
+    {from: 13, to: 26},
+    {from: 13, to: 30},
+    {from: 13, to: 31},
+    {from: 15, to: 34},
+    {from: 15, to: 16},
+    {from: 15, to: 17},
+    {from: 15, to: 18},
+    {from: 15, to: 19},
+    {from: 15, to: 20},
+    {from: 15, to: 24},
+    {from: 18, to: 30},
+    {from: 19, to: 34},
+    {from: 19, to: 26},
+    {from: 21, to: 22},
+    {from: 21, to: 28},
+    {from: 22, to: 32},
+    {from: 22, to: 34},
+    {from: 22, to: 24},
+    {from: 22, to: 25},
+    {from: 22, to: 26},
+    {from: 22, to: 28},
+    {from: 22, to: 30},
+    {from: 22, to: 31},
+    {from: 23, to: 34},
+    {from: 23, to: 24},
+    {from: 23, to: 25},
+    {from: 24, to: 34},
+    {from: 24, to: 25},
+    {from: 24, to: 26},
+    {from: 24, to: 28},
+    {from: 24, to: 30},
+    {from: 25, to: 32},
+    {from: 25, to: 34},
+    {from: 25, to: 26},
+    {from: 25, to: 28},
+    {from: 25, to: 30},
+    {from: 26, to: 34},
+    {from: 26, to: 28},
+    {from: 28, to: 32},
+    {from: 28, to: 34},
+    {from: 28, to: 30},
+    {from: 30, to: 32},
+    {from: 30, to: 34},
+    {from: 30, to: 31},
+    {from: 31, to: 32},
+    {from: 32, to: 34},
+  ]);
+
+      // create a network
+      var container = document.getElementById("mynetwork");
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+      var options = {
+        nodes: {
+          shape: 'dot',
+          size: 10,
+        },
+        layout: {
+          improvedLayout: true
+        },
+      };
+      var network = new vis.Network(container, data, options);
+
+    </script>
+
+
+
+
+    </body></html>
+    

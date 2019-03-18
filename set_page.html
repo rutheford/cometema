@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div><button type="button" onclick="addText('1')">Francisco de Assis (1)</button><button type="button" onclick="addText('2')">Mulheres do/no Evangelho (2)</button><button type="button" onclick="addText('3')">Música (3)</button><button type="button" onclick="addText('4')">COMECON (4)</button><button type="button" onclick="addText('5')">Evolução em Dois Mundos (5)</button><button type="button" onclick="addText('6')">Mediunidade / Mediunidade e vida (6)</button><button type="button" onclick="addText('7')">Espiritismo no Brasil / História do Espiritismo no Brasil (7)</button><button type="button" onclick="addText('8')">Jesus / Jesus Guia e Modelo (8)</button><button type="button" onclick="addText('9')">História de Lucas / São Lucas (9)</button><button type="button" onclick="addText('10')">Arte e Espiritismo / Espiritismo na Arte (10)</button><button type="button" onclick="addText('11')">A Caminho da Luz (11)</button><button type="button" onclick="addText('12')">Cristianismo Primitivo (12)</button><button type="button" onclick="addText('13')">Romances de Emmanuel (13)</button><button type="button" onclick="addText('14')">Transição planetária (14)</button><button type="button" onclick="addText('15')">Bíblia (15)</button><button type="button" onclick="addText('16')">Os Dez Mandamentos (16)</button><button type="button" onclick="addText('17')">Há Dois Mil Anos... (17)</button><button type="button" onclick="addText('18')">Ave, Cristo! (18)</button><button type="button" onclick="addText('19')">Renúncia (19)</button><button type="button" onclick="addText('20')">Paulo e Estêvão (20)</button><button type="button" onclick="addText('21')">Natureza e preservação ambiental (21)</button><button type="button" onclick="addText('22')">O mundo atual (22)</button><button type="button" onclick="addText('23')">Doutrina Espírita tríplice aspecto (23)</button><button type="button" onclick="addText('24')">História do Espiritismo (24)</button><button type="button" onclick="addText('25')">Espiritismo no Brasil e no Mundo (25)</button><button type="button" onclick="addText('26')">Mulheres na História do Espiritismo (26)</button><button type="button" onclick="addText('27')">"Amizade, laços de amizade. Vai ser 30 anos e muitos amigos já passaram por aqui." (27)</button><button type="button" onclick="addText('28')">Brasil (28)</button><button type="button" onclick="addText('29')">Pluralidade de Mundos Habitados (29)</button><button type="button" onclick="addText('30')">Chico Xavier (30)</button><button type="button" onclick="addText('31')">A vida no mundo dos Espíritos (31)</button><button type="button" onclick="addText('32')">Livro Nosso Lar (32)</button><button type="button" onclick="addText('33')">A Justiça Divina Segundo o Espiritismo (33)</button><button type="button" onclick="addText('34')">Ser espírita (34)</button>	</div>
+    <div><textarea id="from" rows="1" cols="50"></textarea></div>
+    <div><textarea id="alltext" rows="20" cols="50"></textarea></div>
+<script type="text/javascript">
+    function addText(text){
+        document.getElementById("alltext").value += "    {from: " + document.getElementById("from").value + ", to: " + text + "},
+";
+    }
+</script>
+</body>
+</html>
