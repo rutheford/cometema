@@ -67,7 +67,7 @@ def write_page(graph, filename='graph.html'):
     </body></html>
     """)
 
-    return f.close()
+    f.close()
 
 # Creates the set page
 def create_set_page(graph, filename='set_page.html'):
